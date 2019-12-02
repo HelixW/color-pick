@@ -1,0 +1,10 @@
+body {
+    background-color: #151718;
+}
+
+div.square.col-4 {
+    max-width: 12rem;
+    height: 12rem;
+    margin: 1rem 1rem;
+    background-color: #301d3c;
+}
