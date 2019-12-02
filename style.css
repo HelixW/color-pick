@@ -2,9 +2,30 @@ body {
     background-color: #151718;
 }
 
+p {
+    margin: 0%;
+}
+
+h1 {
+    margin: 0%;
+}
+
+button {
+    margin: 0%;
+}
+
 div.square.col-4 {
     max-width: 12rem;
     height: 12rem;
     margin: 1rem 1rem;
     background-color: #301d3c;
+}
+
+div.container-fluid {
+    padding: 0%;
+}
+
+#message-display {
+    display: inline-block;
+    width: 30%;
 }
