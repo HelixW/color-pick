@@ -17,6 +17,10 @@ header {
     letter-spacing: 0.3rem;
 }
 
+.color-selected {
+    opacity: 0%;
+}
+
 button.btn {
     margin: 0%;
     background-color: white;
@@ -58,11 +62,16 @@ div.square {
     margin: 1rem 1rem;
     background-color: #301d3c;
     border-radius: 20%;
+    transition: opacity 0.3s ease-out;
 }
 
 #message-display {
     display: inline-block;
     width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
 }
 
 #color-named {
