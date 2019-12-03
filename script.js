@@ -5,7 +5,10 @@ var ColorGame = {
         pickedColor: undefined,
         gameMode: 6,
         namedColor: document.querySelector("#color-named"),
-        squares: document.querySelectorAll(".square")
+        squares: document.querySelectorAll(".square"),
+        colorNamed: document.querySelector("#color-named"),
+        header: document.querySelector("header"),
+        messageDisplay: document.querySelector("#message-display")
     },
 
     init: function() {
@@ -34,6 +37,31 @@ var ColorGame = {
     assignColors: function() {
         for (var i = 0; i < s.gameMode; i++) {
             s.squares[i].style.backgroundColor = s.colors[i];
+        }
+        this.assignName();
+    },
+
+    assignName: function() {
+        s.namedColor.textContent = s.pickedColor;
+        this.bindUIActions();
+    },
+
+    bindUIActions: function() {
+        for (var i = 0; i < s.gameMode; i++) {
+            s.squares[i].addEventListener("click", function() {
+                if (this.style.backgroundColor === s.pickedColor)
+                    ColorGame.win();
+                else this.classList.add("color-selected");
+            });
+        }
+    },
+
+    win: function() {
+        for (var i = 0; i < s.gameMode; i++) {
+            s.squares[i].classList.remove("color-selected");
+            s.squares[i].style.backgroundColor = s.pickedColor;
+            s.header.style.backgroundColor = s.pickedColor;
+            s.messageDisplay.textContent = "Well Done!";
         }
     }
 };
