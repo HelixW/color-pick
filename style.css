@@ -1,6 +1,5 @@
 body {
     background-color: #151718;
-    font-family: "Raleway", sans-serif;
 }
 
 p {
@@ -9,27 +8,10 @@ p {
 
 h1 {
     margin: 0%;
-    font-weight: 400;
 }
 
-.bg-light {
-    background-color: green;
-}
-
-button.btn {
+button {
     margin: 0%;
-    font-weight: 700;
-    color: black;
-    background-color: white;
-}
-
-button.btn.btn-light:hover {
-    color: black;
-    background-color: white;
-}
-
-div.container-fluid {
-    padding: 0%;
 }
 
 div.square.col-4 {
@@ -39,11 +21,11 @@ div.square.col-4 {
     background-color: #301d3c;
 }
 
+div.container-fluid {
+    padding: 0%;
+}
+
 #message-display {
     display: inline-block;
     width: 30%;
-}
-
-#rgb-identifier {
-    font-size: 200%;
 }
