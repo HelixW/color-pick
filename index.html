@@ -13,35 +13,45 @@
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
             crossorigin="anonymous"
         />
+        <link
+            href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
         <title>Color Game</title>
     </head>
     <body>
         <div class="container-fluid">
             <header>
-                <h1 class="text-white text-center bg-info">
+                <h1 class="text-uppercase text-center pt-2 pb-2">
                     <p>The Great</p>
-                    <p>RGB</p>
+                    <p id="color-named">RGB(255, 255, 255)</p>
                     <p>Color Game</p>
                 </h1>
             </header>
-            <div class="text-center bg-light">
-                <button type="button" class="btn btn-light">
+            <div
+                id="stripe"
+                class="text-center d-flex align-items-stretch justify-content-center"
+            >
+                <button type="button" class="btn btn-light btn-inline-block">
                     Change Colors
                 </button>
                 <span id="message-display">
                     <!-- Message goes here -->
                 </span>
-                <button type="button" class="btn btn-light">
+                <button type="button" class="btn btn-light btn-inline-block">
                     Easy
                 </button>
-                <button type="button" class="btn btn-primary">
+                <button
+                    type="button"
+                    class="btn btn-primary btn-inline-block selected"
+                >
                     Hard
                 </button>
             </div>
         </div>
         <div class="container">
-            <div class="square-holder row justify-content-center">
+            <div class="square-holder row justify-content-center pt-2">
                 <div class="square col-4"></div>
                 <div class="square col-4"></div>
                 <div class="square col-4"></div>
