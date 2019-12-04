@@ -9,7 +9,9 @@ var ColorGame = {
         colorNamed: document.querySelector("#color-named"),
         header: document.querySelector("header"),
         messageDisplay: document.querySelector("#message-display"),
-        resetButton: document.querySelector("#reset-button")
+        resetButton: document.querySelector("#reset-button"),
+        difficultyButtons: document.querySelectorAll(".diff-btn"),
+        bottomRow: document.querySelector("#bottom-row")
     },
 
     init: function() {
@@ -20,6 +22,7 @@ var ColorGame = {
 
     generateColors: function() {
         s.colors = [];
+        this.toggleBottom(s.gameMode);
         for (var i = 0; i < s.gameMode; i++)
             s.colors.push(this.generateRandom());
         s.pickedColor = this.selectColor(this.gameMode);
@@ -34,7 +37,7 @@ var ColorGame = {
     },
 
     selectColor: function(n) {
-        return s.colors[Math.floor(Math.random() * 6)];
+        return s.colors[Math.floor(Math.random() * s.gameMode)];
     },
 
     assignColors: function() {
@@ -59,9 +62,15 @@ var ColorGame = {
                 }
             });
         }
-        s.resetButton.addEventListener("click", function() {
-            ColorGame.resetGame();
-        });
+        s.resetButton.addEventListener("click", ColorGame.resetGame);
+        for (var i = 0; i < s.difficultyButtons.length; i++) {
+            s.difficultyButtons[i].addEventListener("click", function() {
+                ColorGame.selectButton(this);
+                if (this.id === "easy-btn") s.gameMode = 3;
+                else s.gameMode = 6;
+                ColorGame.resetGame();
+            });
+        }
     },
 
     win: function() {
@@ -77,9 +86,21 @@ var ColorGame = {
         for (var i = 0; i < s.gameMode; i++) {
             s.squares[i].classList.remove("color-selected");
         }
-        this.generateColors();
+        ColorGame.generateColors();
         s.messageDisplay.textContent = "";
         s.header.style.backgroundColor = "steelblue";
+    },
+
+    selectButton: function(btn) {
+        s.difficultyButtons[0].classList.remove("button-selected");
+        s.difficultyButtons[1].classList.remove("button-selected");
+        btn.classList.add("button-selected");
+    },
+
+    toggleBottom: function(n) {
+        if (n === 3) {
+            s.bottomRow.classList.add("hide-row");
+        } else s.bottomRow.classList.remove("hide-row");
     }
 };
 

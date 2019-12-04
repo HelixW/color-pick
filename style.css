@@ -3,22 +3,18 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
-p {
-    margin: 0%;
-}
-
-h1 {
-    margin: 0%;
-}
-
 header {
     background-color: steelblue;
     color: white;
     letter-spacing: 0.3rem;
 }
 
-.color-selected {
-    opacity: 0%;
+h1 {
+    margin: 0%;
+}
+
+p {
+    margin: 0%;
 }
 
 button.btn {
@@ -127,4 +123,17 @@ div.square {
     #color-named {
         font-size: 100%;
     }
+}
+
+.button-selected.btn.diff-btn {
+    background-color: steelblue;
+    color: white;
+}
+
+.color-selected {
+    opacity: 0%;
+}
+
+.hide-row {
+    opacity: 0%;
 }
