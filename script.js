@@ -8,15 +8,18 @@ var ColorGame = {
         squares: document.querySelectorAll(".square"),
         colorNamed: document.querySelector("#color-named"),
         header: document.querySelector("header"),
-        messageDisplay: document.querySelector("#message-display")
+        messageDisplay: document.querySelector("#message-display"),
+        resetButton: document.querySelector("#reset-button")
     },
 
     init: function() {
         s = this.settings;
         this.generateColors();
+        this.bindUIActions();
     },
 
     generateColors: function() {
+        s.colors = [];
         for (var i = 0; i < s.gameMode; i++)
             s.colors.push(this.generateRandom());
         s.pickedColor = this.selectColor(this.gameMode);
@@ -43,7 +46,6 @@ var ColorGame = {
 
     assignName: function() {
         s.namedColor.textContent = s.pickedColor;
-        this.bindUIActions();
     },
 
     bindUIActions: function() {
@@ -51,18 +53,33 @@ var ColorGame = {
             s.squares[i].addEventListener("click", function() {
                 if (this.style.backgroundColor === s.pickedColor)
                     ColorGame.win();
-                else this.classList.add("color-selected");
+                else {
+                    this.classList.add("color-selected");
+                    s.messageDisplay.textContent = "Try Again!";
+                }
             });
         }
+        s.resetButton.addEventListener("click", function() {
+            ColorGame.resetGame();
+        });
     },
 
     win: function() {
         for (var i = 0; i < s.gameMode; i++) {
             s.squares[i].classList.remove("color-selected");
             s.squares[i].style.backgroundColor = s.pickedColor;
-            s.header.style.backgroundColor = s.pickedColor;
-            s.messageDisplay.textContent = "Well Done!";
         }
+        s.header.style.backgroundColor = s.pickedColor;
+        s.messageDisplay.textContent = "Well Done!";
+    },
+
+    resetGame: function() {
+        for (var i = 0; i < s.gameMode; i++) {
+            s.squares[i].classList.remove("color-selected");
+        }
+        this.generateColors();
+        s.messageDisplay.textContent = "";
+        s.header.style.backgroundColor = "steelblue";
     }
 };
 
