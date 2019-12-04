@@ -25,7 +25,7 @@ var ColorGame = {
         this.toggleBottom(s.gameMode);
         for (var i = 0; i < s.gameMode; i++)
             s.colors.push(this.generateRandom());
-        s.pickedColor = this.selectColor(this.gameMode);
+        s.pickedColor = this.selectColor();
         this.assignColors();
     },
 
@@ -36,14 +36,13 @@ var ColorGame = {
         return "rgb(" + r + ", " + g + ", " + b + ")";
     },
 
-    selectColor: function(n) {
+    selectColor: function() {
         return s.colors[Math.floor(Math.random() * s.gameMode)];
     },
 
     assignColors: function() {
-        for (var i = 0; i < s.gameMode; i++) {
+        for (var i = 0; i < s.gameMode; i++)
             s.squares[i].style.backgroundColor = s.colors[i];
-        }
         this.assignName();
     },
 
@@ -52,25 +51,19 @@ var ColorGame = {
     },
 
     bindUIActions: function() {
-        for (var i = 0; i < s.gameMode; i++) {
+        for (var i = 0; i < s.gameMode; i++)
             s.squares[i].addEventListener("click", function() {
-                if (this.style.backgroundColor === s.pickedColor)
-                    ColorGame.win();
-                else {
-                    this.classList.add("color-selected");
-                    s.messageDisplay.textContent = "Try Again!";
-                }
+                this.style.backgroundColor === s.pickedColor
+                    ? ColorGame.win()
+                    : ColorGame.retry(this);
             });
-        }
         s.resetButton.addEventListener("click", ColorGame.resetGame);
-        for (var i = 0; i < s.difficultyButtons.length; i++) {
+        for (var i = 0; i < s.difficultyButtons.length; i++)
             s.difficultyButtons[i].addEventListener("click", function() {
                 ColorGame.selectButton(this);
-                if (this.id === "easy-btn") s.gameMode = 3;
-                else s.gameMode = 6;
+                this.id === "easy-btn" ? (s.gameMode = 3) : (s.gameMode = 6);
                 ColorGame.resetGame();
             });
-        }
     },
 
     win: function() {
@@ -82,10 +75,14 @@ var ColorGame = {
         s.messageDisplay.textContent = "Well Done!";
     },
 
+    retry: function(sqr) {
+        sqr.classList.add("color-selected");
+        s.messageDisplay.textContent = "Try Again!";
+    },
+
     resetGame: function() {
-        for (var i = 0; i < s.gameMode; i++) {
+        for (var i = 0; i < s.gameMode; i++)
             s.squares[i].classList.remove("color-selected");
-        }
         ColorGame.generateColors();
         s.messageDisplay.textContent = "";
         s.header.style.backgroundColor = "steelblue";
@@ -98,9 +95,9 @@ var ColorGame = {
     },
 
     toggleBottom: function(n) {
-        if (n === 3) {
-            s.bottomRow.classList.add("hide-row");
-        } else s.bottomRow.classList.remove("hide-row");
+        n === 3
+            ? s.bottomRow.classList.add("hide-row")
+            : s.bottomRow.classList.remove("hide-row");
     }
 };
 
