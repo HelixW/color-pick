@@ -2,16 +2,15 @@ var s;
 var ColorGame = {
     settings: {
         colors: [],
-        pickedColor: undefined,
         gameMode: 6,
-        namedColor: document.querySelector("#color-named"),
-        squares: document.querySelectorAll(".square"),
-        colorNamed: document.querySelector("#color-named"),
-        header: document.querySelector("header"),
-        messageDisplay: document.querySelector("#message-display"),
-        resetButton: document.querySelector("#reset-button"),
-        difficultyButtons: document.querySelectorAll(".diff-btn"),
-        bottomRow: document.querySelector("#bottom-row")
+        pickedColor: undefined,
+        squares: $('.square'),
+        namedColor: $('#color-named'),
+        header: $('header'),
+        messageDisplay: $('#message-display'),
+        resetButton: $('#reset-button'),
+        difficultyButtons: $('.diff-btn'),
+        bottomRow: $('#bottom-row')
     },
 
     init: function() {
@@ -33,7 +32,7 @@ var ColorGame = {
         var r = Math.floor(Math.random() * 256);
         var g = Math.floor(Math.random() * 256);
         var b = Math.floor(Math.random() * 256);
-        return "rgb(" + r + ", " + g + ", " + b + ")";
+        return 'rgb(' + r + ', ' + g + ', ' + b + ')';
     },
 
     selectColor: function() {
@@ -41,63 +40,62 @@ var ColorGame = {
     },
 
     assignColors: function() {
-        for (var i = 0; i < s.gameMode; i++)
-            s.squares[i].style.backgroundColor = s.colors[i];
+        var i = 0;
+        s.squares.each(function() {
+            $(this).css('background-color', s.colors[i]);
+            i++;
+        });
         this.assignName();
     },
 
     assignName: function() {
-        s.namedColor.textContent = s.pickedColor;
+        s.namedColor.text(s.pickedColor);
     },
 
     bindUIActions: function() {
-        for (var i = 0; i < s.gameMode; i++)
-            s.squares[i].addEventListener("click", function() {
-                this.style.backgroundColor === s.pickedColor
-                    ? ColorGame.win()
-                    : ColorGame.retry(this);
-            });
-        s.resetButton.addEventListener("click", ColorGame.resetGame);
-        for (var i = 0; i < s.difficultyButtons.length; i++)
-            s.difficultyButtons[i].addEventListener("click", function() {
-                ColorGame.selectButton(this);
-                this.id === "easy-btn" ? (s.gameMode = 3) : (s.gameMode = 6);
-                ColorGame.resetGame();
-            });
+        s.squares.click(function() {
+            $(this).css('background-color') === s.pickedColor
+                ? ColorGame.win()
+                : ColorGame.retry($(this));
+        });
+        s.resetButton.click(ColorGame.resetGame);
+        s.difficultyButtons.click(function() {
+            ColorGame.selectButton($(this));
+            $(this).attr('id') === 'easy-btn'
+                ? (s.gameMode = 3)
+                : (s.gameMode = 6);
+            ColorGame.resetGame();
+        });
     },
 
     win: function() {
-        for (var i = 0; i < s.gameMode; i++) {
-            s.squares[i].classList.remove("color-selected");
-            s.squares[i].style.backgroundColor = s.pickedColor;
-        }
-        s.header.style.backgroundColor = s.pickedColor;
-        s.messageDisplay.textContent = "Well Done!";
+        s.squares.removeClass('color-selected');
+        s.squares.css('background-color', s.pickedColor);
+        s.header.css('background-color', s.pickedColor);
+        s.messageDisplay.text('Well Done!');
     },
 
     retry: function(sqr) {
-        sqr.classList.add("color-selected");
-        s.messageDisplay.textContent = "Try Again!";
+        sqr.addClass('color-selected');
+        s.messageDisplay.text('Try Again!');
     },
 
     resetGame: function() {
-        for (var i = 0; i < s.gameMode; i++)
-            s.squares[i].classList.remove("color-selected");
+        s.squares.removeClass('color-selected');
         ColorGame.generateColors();
-        s.messageDisplay.textContent = "";
-        s.header.style.backgroundColor = "steelblue";
+        s.messageDisplay.text('');
+        s.header.css('background-color', 'steelblue');
     },
 
     selectButton: function(btn) {
-        s.difficultyButtons[0].classList.remove("button-selected");
-        s.difficultyButtons[1].classList.remove("button-selected");
-        btn.classList.add("button-selected");
+        s.difficultyButtons.removeClass('button-selected');
+        btn.addClass('button-selected');
     },
 
     toggleBottom: function(n) {
         n === 3
-            ? s.bottomRow.classList.add("hide-row")
-            : s.bottomRow.classList.remove("hide-row");
+            ? s.bottomRow.addClass('hide-row')
+            : s.bottomRow.removeClass('hide-row');
     }
 };
 

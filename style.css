@@ -1,139 +1,139 @@
 body {
-    background-color: #151718;
-    font-family: "Raleway", sans-serif;
+  background-color: #151718;
+  font-family: 'Raleway', sans-serif;
 }
 
 header {
-    background-color: steelblue;
-    color: white;
-    letter-spacing: 0.3rem;
+  background-color: steelblue;
+  color: white;
+  letter-spacing: 0.3rem;
 }
 
 h1 {
-    margin: 0%;
+  margin: 0%;
 }
 
 p {
-    margin: 0%;
+  margin: 0%;
 }
 
 .color-selected {
-    opacity: 0%;
+  opacity: 0%;
 }
 
 .hide-row {
-    opacity: 0%;
+  opacity: 0%;
 }
 
 button.btn {
-    margin: 0%;
-    background-color: white;
-    border: none;
-    font-weight: 700;
-    color: steelblue;
-    outline: none;
-    border-radius: 0%;
-    transition: all 0.4s;
+  margin: 0%;
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  color: steelblue;
+  outline: none;
+  border-radius: 0%;
+  transition: all 0.4s;
 }
 
 div.container-fluid {
-    padding: 0%;
+  padding: 0%;
 }
 
 div.square {
-    max-width: 12rem;
-    height: 12rem;
-    margin: 1rem 1rem;
-    background-color: #301d3c;
-    border-radius: 20%;
-    transition: opacity 0.3s ease-out;
+  max-width: 12rem;
+  height: 12rem;
+  margin: 1rem 1rem;
+  background-color: #301d3c;
+  border-radius: 20%;
+  transition: opacity 0.3s ease-out;
 }
 
 button.selected {
-    background: steelblue;
-    color: white;
+  background: steelblue;
+  color: white;
 }
 
 button.btn:focus {
-    background-color: white;
-    color: steelblue;
-    border: none;
-    outline: none;
-    box-shadow: none;
+  background-color: white;
+  color: steelblue;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 button.btn:hover {
-    background-color: steelblue;
-    color: white;
-    border: none;
-    outline: none;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  outline: none;
 }
 
 .button-selected.btn.diff-btn {
-    background-color: steelblue;
-    color: white;
+  background-color: steelblue;
+  color: white;
 }
 
 #message-display {
-    display: inline-block;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+  display: inline-block;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
 }
 
 #color-named {
-    font-size: 200%;
+  font-size: 200%;
 }
 
 #stripe {
-    height: 2.5rem;
-    background-color: white;
+  height: 2.5rem;
+  background-color: white;
 }
 
 @media (max-width: 768px) {
-    header {
-        background-color: steelblue;
-        color: white;
-        letter-spacing: 0rem;
-    }
+  header {
+    background-color: steelblue;
+    color: white;
+    letter-spacing: 0rem;
+  }
 
-    div.square {
-        max-width: 9rem;
-        height: 9rem;
-        margin: 0.7rem;
-        background-color: #301d3c;
-    }
+  div.square {
+    max-width: 9rem;
+    height: 9rem;
+    margin: 0.7rem;
+    background-color: #301d3c;
+  }
 
-    #stripe {
-        margin-bottom: 1rem;
-    }
+  #stripe {
+    margin-bottom: 1rem;
+  }
 
-    #color-named {
-        font-size: 150%;
-    }
+  #color-named {
+    font-size: 150%;
+  }
 }
 
 @media (max-width: 576px) {
-    header {
-        background-color: steelblue;
-        color: white;
-        letter-spacing: 0.1rem;
-    }
+  header {
+    background-color: steelblue;
+    color: white;
+    letter-spacing: 0.1rem;
+  }
 
-    div.square {
-        max-width: 6rem;
-        height: 6rem;
-        margin: 0.5rem;
-        background-color: #301d3c;
-    }
+  div.square {
+    max-width: 6rem;
+    height: 6rem;
+    margin: 0.5rem;
+    background-color: #301d3c;
+  }
 
-    #stripe {
-        margin-bottom: 2rem;
-    }
+  #stripe {
+    margin-bottom: 2rem;
+  }
 
-    #color-named {
-        font-size: 100%;
-    }
+  #color-named {
+    font-size: 100%;
+  }
 }
