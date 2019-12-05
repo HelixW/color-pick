@@ -18,13 +18,11 @@ p {
 }
 
 .color-selected {
-    opacity: 0%;
-    background-color: #151718;
+    opacity: 0;
 }
 
 .hide-row {
-    opacity: 0%;
-    background-color: #151718;
+    opacity: 0;
 }
 
 button.btn {
