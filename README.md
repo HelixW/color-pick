@@ -4,7 +4,7 @@
     </a>
     <h3 align="center">Color Pick</h3>
     <p align="center">
-        `Color Pick` is a color guessing game where the player picks colors based on their intuition and RGB guessing skills.
+        <em>Color Pick</em> is a color guessing game where the player picks colors based on their RGB knowledge.
         <br />
         <a href="https://helixw.github.io/restructured-color-game"><strong>Play The Game »</strong></a>
         <br />
@@ -28,8 +28,9 @@
 - [Acknowledgements](#acknowledgements)
 
 ## About The Project
+
 <p align="center"> 
-    ![Gameplay GIF](https://i.imgur.com/UkAChx7.gif 'Gameplay')
+    <img src="https://i.imgur.com/UkAChx7.gif" alt="Logo" width="300">
 </p>
 
 This project was made when I was learning `DOM Manipulation` using JQuery and Vanilla JavaScript. The idea of this project comes from Colt Steele from the course The Web Developer Bootcamp.
