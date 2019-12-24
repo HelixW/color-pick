@@ -65,7 +65,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 - Project Link: [https://github.com/helixw/restructured-color-game](https://github.com/helixw/restructured-color-game)
-- Shreyas: [Instagram](https://instagram.com/flow_of_time) | [LinkedIn](https://www.linkedin.com/in/shreyas-khan-0aa77018b) | (shreyas.2000@hotmail.com)
+- Shreyas: [Instagram](https://instagram.com/flow_of_time) | [LinkedIn](https://www.linkedin.com/in/shreyas-khan-0aa77018b) | shreyas.2000@hotmail.com
 
 ## Acknowledgements
 
