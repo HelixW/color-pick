@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/HelixW/restructured-color-game">
-        <img src="https://img.icons8.com/color/48/000000/color-palette.png" alt="Logo" width="80" height="80">
+        <img src="https://img.icons8.com/color/100/000000/color-palette.png" alt="Logo" width="80" height="80">
     </a>
     <h3 align="center">Color Pick</h3>
     <p align="center">
@@ -63,8 +63,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Project Link: [https://github.com/helixw/restructured-color-game](https://github.com/helixw/restructured-color-game)
-Shreyas - [Instagram](https://instagram.com/flow_of_time) - [LinkedIn](https://www.linkedin.com/in/shreyas-khan-0aa77018b) - (shreyas.2000@hotmail.com)
+- Project Link: [https://github.com/helixw/restructured-color-game](https://github.com/helixw/restructured-color-game)
+- Shreyas . [Instagram](https://instagram.com/flow_of_time) . [LinkedIn](https://www.linkedin.com/in/shreyas-khan-0aa77018b) . (shreyas.2000@hotmail.com)
 
 ## Acknowledgements
 
