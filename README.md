@@ -1,16 +1,42 @@
-# Color Pick
+<p align="center">
+    <a href="https://github.com/HelixW/restructured-color-game">
+        <img src="icons/title-icon.png" alt="Logo" width="80" height="80">
+    </a>
+    <h3 align="center">Color Pick</h3>
+    <p align="center">
+        `Color Pick` is a color guessing game where the player picks colors based on their intuition and RGB guessing skills.
+        <br />
+        <a href="https://helixw.github.io/restructured-color-game"><strong>Play The Game »<strong></a>
+        <br />
+        <br />
+        <a href="https://github.com/HelixW/restructured-color-game/issues">Report Bug</a>
+        ·
+        <a href="https://github.com/HelixW/restructured-color-game/issues">Request Feature</a>
+    </p>
+</p>
 
-![Color Pick Logo](https://img.icons8.com/color/96/000000/color-palette.png 'Color Pick')
+## Table of Contents
 
-```
-Developed by Shreyas Khan --> (github.com/helixw)
-```
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [How To Play](#how-to-play)
+- [Modes Of Gameplay](#modes-of-gameplay)
+- [How It Works](#how-it-works)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-[Link To Game](https://helixw.github.io/restructured-color-game)
+## About The Project
 
-## Description
+![Gameplay GIF](https://i.imgur.com/UkAChx7.gif 'Gameplay')
 
-`Color Pick` is a color guessing game where the player picks colors based on their intuition and RGB guessing skills.
+This project was made when I was learning `DOM Manipulation` using JQuery and Vanilla JavaScript. The idea of this project comes from Colt Steele from the course The Web Developer Bootcamp.
+
+### Built With
+
+- [Bootstrap](https://getbootstrap.com)
+- [JQuery](https://jquery.com)
 
 ## How To Play
 
@@ -30,6 +56,18 @@ Developed by Shreyas Khan --> (github.com/helixw)
 2. A color is chosen out of the 6 again with the help of the random number generator. This color is saved as the `Chosen Color`.
 3. The squares are filled with the generated colors and the `Color Hint` is changed to show the `Chosen Color`.
 
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Project Link: [https://github.com/helixw/restructured-color-game](https://github.com/helixw/restructured-color-game)
+Shreyas - [Instagram](https://instagram.com/flow_of_time) - [LinkedIn](https://www.linkedin.com/in/shreyas-khan-0aa77018b) - (shreyas.2000@hotmail.com)
+
 ## Acknowledgements
 
--   This project is not an idea of my own but is a part of the course _The Web Developer Bootcamp_ by _Colt Steele_.
+- [Font Awesome](https://fontawesome.com/)
+- [GitHub Pages](https://pages.github.com)
+- [Choose an Open Source License](https://choosealicense.com)
+- [README Template](https://github.com/othneildrew/Best-README-Template)
