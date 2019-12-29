@@ -1,17 +1,17 @@
 <p align="center">
-    <a href="https://github.com/HelixW/restructured-color-game">
+    <a href="https://github.com/HelixW/color-pick">
         <img src="https://img.icons8.com/color/100/000000/color-palette.png" alt="Logo" width="80" height="80">
     </a>
     <h3 align="center">Color Pick</h3>
     <p align="center">
         <em>Color Pick</em> is a color guessing game where the player picks colors based on their RGB knowledge.
         <br />
-        <a href="https://helixw.github.io/restructured-color-game"><strong>Play The Game »</strong></a>
+        <a href="https://color-pick.netlify.com/"><strong>Play The Game »</strong></a>
         <br />
         <br />
-        <a href="https://github.com/HelixW/restructured-color-game/issues">Report Bug</a>
+        <a href="https://github.com/HelixW/color-pick/issues">Report Bug</a>
         ·
-        <a href="https://github.com/HelixW/restructured-color-game/issues">Request Feature</a>
+        <a href="https://github.com/HelixW/color-pick/issues">Request Feature</a>
     </p>
 </p>
 
@@ -64,7 +64,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-- Project Link: [https://github.com/helixw/restructured-color-game](https://github.com/helixw/restructured-color-game)
+- Project Link: [https://github.com/helixw/color-pick](https://github.com/helixw/color-pick)
 - Shreyas: [Instagram](https://instagram.com/flow_of_time) | [LinkedIn](https://www.linkedin.com/in/shreyas-khan-0aa77018b) | shreyas.2000@hotmail.com
 
 ## Acknowledgements
